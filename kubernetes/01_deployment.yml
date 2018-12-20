@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fakestagram-app 
-  labels: 
-    app: fakestagram-app
-spec: 
-  selector:
-    matchLabels:
-    app: fakestagram-app 
-template:
-  metadata:
   labels:
     app: fakestagram-app 
-  spec:
-    containers:
-    - name: fakestagram-app 
-    image: prince427/fakestagram-app 
-    ports:
-    - name:http-port 
-      containerPort: 8080
+spec:
+  selector:
+    matchLabels:
+      app: fakestagram-app 
+  template:
+    metadata:
+      labels:
+        app: fakestagram-app
+    spec:
+      containers:
+      - name: fakestagram-app
+        image: prince427/fakestagram-app                             
+        ports: 
+        - name: http-port
+          containerPort: 8080
 
