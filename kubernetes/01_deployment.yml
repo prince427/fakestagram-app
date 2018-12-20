@@ -18,5 +18,5 @@ spec:
         image: prince427/fakestagram-app                             
         ports: 
         - name: http-port
-          containerPort: 8080
+          containerPort: 5000
 
